@@ -53,15 +53,25 @@ Metadata was removed from the published images, and personal paths were redacted
 
 ## 사용 방법
 
-1. Releases의 Windows 포터블 ZIP을 내려받아 **폴더 전체**를 압축 해제합니다.
-2. `L99StreamDeck.exe`를 실행하고 이름·경로·아이콘을 지정한 뒤 **설정 저장**을 누릅니다.
-3. 처음 설치하거나 전체 화면 구성을 바꿀 때는 **펌웨어 적용**을 누릅니다. USB 모드에서 Fn+스페이스를 약 5초 눌러 화면을 끄고 기본 업데이터의 **Start**를 누릅니다. 약 10분 소요됩니다.
-4. **100%·OK**를 확인한 다음 업데이터를 닫고 키보드를 껐다 켭니다.
-5. 이후 이름·아이콘만 바꿀 때는 **아이콘 적용**을 사용합니다. 같은 방법으로 화면을 끄고 진행하며, 전체 검증 포함 약 2~3분 걸립니다. 완료 안내 후 키보드를 다시 켭니다.
+**권장 실행 순서:** 압축 풀기 → USB 모드·NumLock 확인 → 프로그램 실행 → 바로가기 편집·설정 저장 → 최초 펌웨어 적용 → 100%·OK 확인 → 키보드 재시작 → 홈에서 스트림덱 진입.
 
-실행 경로나 웹 주소만 바꿨다면 **설정 저장**만 하면 됩니다. 펌웨어나 아이콘을 다시 기록할 필요가 없습니다. 기본 업데이터는 제조사 1.31 원본이며 실험용 고속 수정본은 포함하지 않습니다.
+1. [릴리스](https://github.com/Fung0152/aula-l99-korean-streamdeck/releases/tag/v0.1.0)의 **Windows 포터블 ZIP**을 폴더 전체로 압축 해제합니다. EXE만 옮기지 마세요.
+2. USB 모드에서 `L99StreamDeck.exe`를 실행합니다. 연결은 자동으로 켜집니다. 각 행의 이름·실행 경로·아이콘을 설정하고 **설정 저장**을 누릅니다. 웹 주소도 같은 경로 칸에 입력할 수 있습니다.
+3. 처음 설치할 때는 **펌웨어 적용**으로 화면 파일을 만듭니다. Fn+스페이스를 약 5초 눌러 화면을 끄고 USB 재연결을 기다린 뒤, 열린 기본 업데이터의 **Start**를 한 번 누릅니다.
+4. 약 10분 뒤 **100%·OK**를 확인하면 업데이터를 닫고 키보드를 껐다 켭니다. 그전에는 USB·전원을 유지하세요.
+5. PC 프로그램이 연결된 상태에서 키보드 홈의 **스트림덱**으로 들어가 원하는 아이콘을 누릅니다. **뒤로가기**로 해제합니다. 연결을 다시 켰을 때 이미 스트림덱 화면이었다면 홈으로 나갔다가 다시 진입하세요.
 
-최소화하면 트레이에서 연결을 유지합니다. X는 트레이 이동·완전 종료·취소를 묻습니다. 전체 펌웨어 적용 중에는 연결을 끄고, 업데이터 창이 닫히면 다시 켭니다. 아이콘 적용은 검증 성공 후 자동으로 연결을 켭니다.
+| 바꾼 내용 | 사용할 버튼 | 예상 시간 |
+|---|---|---|
+| 프로그램·파일 경로 또는 웹 주소만 변경 | 설정 저장 | 바로 반영 |
+| 키보드에 보이는 이름·아이콘 변경 | 아이콘 적용 | 약 2~3분 |
+| 최초 설치·화면 구성 변경·전체 복구 | 펌웨어 적용 | 약 10분 |
+
+**아이콘 적용**도 USB 모드에서 화면을 끈 후 진행하고, 검증 완료 안내 뒤 키보드를 다시 켭니다. 실행 경로만 바꿀 때는 다시 기록하지 않습니다. 별도 통합 화면 ZIP까지 순서대로 모두 기록할 필요는 없습니다.
+
+최소화하면 트레이에서 계속 연결됩니다. Windows 자동 시작은 상단 체크박스로 등록하며, X는 트레이·완전 종료·취소를 묻습니다. 전체 적용은 사용자 사진·GIF·배경을 덮어쓸 수 있으므로 보존할 콘텐츠를 먼저 고려하세요.
+
+파일 선택 예시, 11버튼 배치, 전체·아이콘 적용 절차, 트레이 사용과 오류 대처는 **[자세한 사용 안내](app/USAGE.ko.md)** 및 **[English guide](app/USAGE.en.md)**에 정리했습니다.
 
 ## 입력 방식과 제약
 
@@ -141,6 +151,8 @@ This is an **initial experimental release** containing the integrated applicatio
 - Optionally start with Windows sign-in. Closing the window offers tray mode, full exit or cancel.
 
 ### Installation and use
+
+**Recommended order:** extract the full Windows ZIP → USB mode and NumLock → run the app → edit and save shortcuts → perform the first full update → wait for 100% / OK → restart the keyboard → enter Stream Deck from Home. See the [detailed English guide](app/USAGE.en.md) for button mappings, icon-only updates, tray behavior and troubleshooting.
 
 1. Download the portable Windows ZIP from Releases and extract the **entire folder**.
 2. Run `L99StreamDeck.exe`, edit names, targets and icons, then select **설정 저장 (Save settings)**.

@@ -12,3 +12,4 @@ dest=ROOT/'dist/L99StreamDeck'
 for name in ('assets','vendor'):shutil.copytree(ROOT/'app'/name,dest/name,dirs_exist_ok=True)
 for name in ('LICENSE','THIRD_PARTY.md'):shutil.copy2(ROOT/name,dest/name)
 shutil.copy2(ROOT/'app/USAGE.ko.md',dest/'사용안내.md')
+shutil.copy2(ROOT/'app/USAGE.en.md',dest/'USAGE.en.md')
