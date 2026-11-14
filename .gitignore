@@ -1,0 +1,11 @@
+data/
+generated/
+update-package/
+__pycache__/
+build/
+dist/
+*.spec
+*.log
+*.local.json
+.env
+.venv/

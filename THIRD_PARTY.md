@@ -1,0 +1,10 @@
+# Credits and component licensing
+
+- This repository's project source: GPL-2.0-only; see LICENSE. It is a newly assembled integrated project, without the previous localization-only repository's history or packages.
+- Prior resource-format/localization research: https://github.com/softce/aula-l99-research and its README.ru.md. The Russian localization project is credited as the starting research reference; its language output is not shipped here.
+- Runtime protocol research reference: https://github.com/gavindi/Aula_L99_Linux . The normal-mode arbitrary-address experiment is not included in the application transport.
+- Galmuri11 and Galmuri11 Condensed BDF: https://github.com/quiple/galmuri , copyright Lee Minseo and the contributors credited upstream. SIL Open Font License 1.1, bundled in app/assets/fonts/LICENSE.txt. Fonts are redistributed unmodified; rendering creates screen pixels without installing system fonts.
+- Manufacturer display resources and original HFD ISP TOOL V1.31: AULA/its suppliers and Levetop-related tooling. Source-code GPL does not relicense manufacturer firmware, artwork or binaries. The private review package includes the original updater and its matching dependencies; it does not include HFD_Code executable firmware or a modified fast updater. Existing notices embedded in vendor components remain intact.
+- Qt and other vendor-supplied runtime DLLs retain their respective upstream licenses. Third-party Python runtime components bundled in the portable release retain their package licenses (Python, Pillow, pyserial, pystray, six, PyInstaller and hooks).
+
+Only integrated display-resource modifications are intended. The keyboard MCU executable is not flashed by this project. This private review release does not assert redistribution rights for vendor components beyond their applicable terms.
