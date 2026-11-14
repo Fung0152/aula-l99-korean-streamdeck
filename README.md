@@ -82,6 +82,97 @@ python build.py
 
 ## 출처
 
-중국어 화면을 러시아어로 바꾼 선행 프로젝트 [softce/aula-l99-research](https://github.com/softce/aula-l99-research) ([러시아어 문서](https://github.com/softce/aula-l99-research/blob/main/README.ru.md))의 리소스 분석을 참고했습니다. USB 화면 전송 연구는 [gavindi/Aula_L99_Linux](https://github.com/gavindi/Aula_L99_Linux), 한글·영문 비트맵 글꼴은 [quiple/galmuri](https://github.com/quiple/galmuri)를 참고·사용했습니다.
+한글화 작업에는 중국어 화면을 러시아어로 번역한 선행 프로젝트 [softce/aula-l99-research](https://github.com/softce/aula-l99-research)의 **[러시아어 문서 README.ru.md](https://github.com/softce/aula-l99-research/blob/main/README.ru.md)와 화면 리소스 분석을 참고했습니다.** 한국어 번역과 스트림덱 기능은 이를 참고해 별도로 구현했습니다.
+
+**English:** The Korean localization was developed with reference to the **[Russian documentation (README.ru.md)](https://github.com/softce/aula-l99-research/blob/main/README.ru.md)** and display-resource analysis from [softce/aula-l99-research](https://github.com/softce/aula-l99-research), an earlier project that translated the Chinese interface into Russian. The Korean translation and Stream Deck functionality were implemented separately, informed by that work.
+
+ USB 화면 전송 연구는 [gavindi/Aula_L99_Linux](https://github.com/gavindi/Aula_L99_Linux), 한글·영문 비트맵 글꼴은 [quiple/galmuri](https://github.com/quiple/galmuri)를 참고·사용했습니다.
 
 비공식 개조 프로젝트로 AULA 또는 Elgato와 제휴하지 않습니다. 소스 라이선스와 제조사 리소스·업데이터 및 글꼴의 권리 범위는 [THIRD_PARTY.md](THIRD_PARTY.md)를 참고하세요.
+
+
+---
+
+## English
+
+### AULA L99 Korean Localization & Stream Deck Mod
+
+**This program was written using GPT SOL 6.1. The GitHub project description and documentation were also written with GPT.** Because the code was developed with GPT, we recommend reviewing the code, file hashes and device connection with GPT when applying the modifications. AI assistance does not guarantee compatibility with every hardware revision.
+
+**Recorded cumulative token usage: 285,153,587 tokens**, as of **2026-11-14 13:58:50 KST**.
+
+| Category | Tokens |
+|---|---:|
+| Input, including cached input | 284,767,832 |
+| Cached portion of input | 282,533,632 |
+| Uncached portion of input | 2,234,200 |
+| Output | 385,755 |
+| **Total: input + output** | **285,153,587** |
+
+This is a snapshot of the local development conversation's cumulative usage. Later work is not included. Cached input is already part of input and must not be added again. The figures include repeatedly supplied context and cache reuse; they do not represent newly written text or monetary cost. Raw conversations, usage logs and personal information are not published.
+
+### Overview and features
+
+A Windows editor and integrated display resources for the AULA L99. The Chinese menus are localized into Korean, while English menus remain available. The home screen gains a Stream Deck entry button, a page with 11 customizable shortcuts and a back button. Korean and English labels within the Stream Deck area use a pixel font.
+
+This is a **private review release** containing the integrated application and display resources rebuilt with factory defaults. It does not include the previous localization-only package or its development history.
+
+- Launch programs, files, folders, shortcuts and HTTP/HTTPS addresses.
+- Customize the names and icons of 11 buttons; extract Windows file icons or select an image.
+- **펌웨어 적용 (Apply firmware):** apply Korean localization, Stream Deck mode, font changes and configured icons together using the original manufacturer updater.
+- **아이콘 적용 (Apply icons):** write only the reserved 384 KB icon region, with CRC checks before and after the operation.
+- Automatically connect when the app starts, resume the connection after applying changes, and continue operating in the system tray.
+- Optionally start with Windows sign-in. Closing the window offers tray mode, full exit or cancel.
+
+### Installation and use
+
+1. Download the portable Windows ZIP from Releases and extract the **entire folder**.
+2. Run `L99StreamDeck.exe`, edit names, targets and icons, then select **설정 저장 (Save settings)**.
+3. For the initial installation or a complete layout change, choose **펌웨어 적용 (Apply firmware)**. Use USB mode, hold Fn+Space for approximately five seconds to turn off the display, then click **Start** in the original updater. A full update takes approximately ten minutes.
+4. Wait for **100% / OK**, close the updater and restart the keyboard.
+5. For subsequent name/icon changes, use **아이콘 적용 (Apply icons)** with the display turned off in the same way. Including full verification, this takes approximately two to three minutes. Restart the keyboard after the completion message.
+
+Changing only a launch target or web address requires **Save settings**, without rewriting display resources. The full-update path uses the original manufacturer updater 1.31; the experimental fast updater is not included.
+
+Minimizing keeps the connection running in the tray. The X button offers tray mode, full exit and cancel. During a full update, the connection is stopped and resumes when the updater window closes. After an icon update, it resumes following successful verification. Closing the updater alone is not treated as proof of a successful firmware update.
+
+### Input mapping and compatibility
+
+Entering Stream Deck mode emits numpad `-`; the back button emits numpad `+`. The 11 shortcut tiles map to numpad `0–9` and `/`, from left to right and top to bottom. **Enable NumLock.** While connected, numpad `-` and `+` are reserved. In Stream Deck mode, the physical numpad digits and divide key also trigger the assigned shortcuts. Leaving the mode restores ordinary digit/divide input; a full application exit releases the hotkeys.
+
+The PC application must remain running to launch Windows applications. The display does not launch them independently. Development and hardware testing used one L99 in USB mode, with keyboard-reported version 1.29. Other revisions and wireless operation are not verified.
+
+### Privacy and data preservation
+
+The release excludes personal IP addresses, weather locations and coordinates, personal paths, settings, custom icons, photos, communication logs and development conversations. The weather/humidity helper that previously used a personal location is also excluded. Continuously supplying PC/weather readings to the existing real-time information screen requires a separate helper.
+
+User settings and icons are saved locally under `data/`, which is ignored by Git. The application does not automatically locate the user, collect remote logs or call a weather API. User-configured web addresses open in the default browser.
+
+Icon updates target only the reserved icon region and verify the complete image CRC. **A full update writes the distribution's reference image and may overwrite photos, GIFs or backgrounds saved on the device.** The distributed image is not a readback backup of a keyboard. Keep a full recovery package available and maintain USB power throughout an update. Failed transfers are not automatically retried.
+
+### Running and building from source
+
+On Windows with Python 3.10 or newer:
+
+```powershell
+python -m pip install -r requirements.txt
+python app/main.py
+python app/test_boot_icons.py
+```
+
+To build a portable executable:
+
+```powershell
+python -m pip install -r requirements-build.txt
+python build.py
+```
+
+`app/assets/private-layout.zip` contains the integrated reference image generated without personal settings. The app checks its SHA-256. This freshly rebuilt factory-default distribution image has not itself been flashed for a new hardware test; the corresponding layout and transfer paths were tested on the development device. See [the usage guide](app/USAGE.ko.md) for further details.
+
+### Acknowledgments
+
+The Korean localization references the **[Russian documentation (README.ru.md)](https://github.com/softce/aula-l99-research/blob/main/README.ru.md)** and resource-format analysis of [softce/aula-l99-research](https://github.com/softce/aula-l99-research), which translated the Chinese display interface into Russian. The Korean translation and Stream Deck functionality were implemented separately, informed by this prior research.
+
+USB display-transfer research: [gavindi/Aula_L99_Linux](https://github.com/gavindi/Aula_L99_Linux). Korean/Latin bitmap fonts: [quiple/galmuri](https://github.com/quiple/galmuri).
+
+This is an unofficial modification project, unaffiliated with AULA or Elgato. Source licensing and the separate rights applicable to manufacturer resources, the updater and fonts are documented in [THIRD_PARTY.md](THIRD_PARTY.md).
