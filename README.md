@@ -22,7 +22,7 @@
 
 Windows 편집기와 AULA L99 디스플레이용 통합 화면 리소스입니다. 중국어 메뉴를 한국어로 바꾸고, 홈 화면에 스트림덱 진입 버튼과 11개의 사용자 바로가기, 뒤로가기를 추가합니다. 영문 메뉴는 유지하며 스트림덱 영역의 한글·영문 이름은 픽셀 글꼴로 표시합니다.
 
-**비공개 검토용 배포.** 이전 한글화 전용 게시본·작업 이력은 포함하지 않습니다. 이 저장소는 통합 프로그램과 기본 설정으로 다시 생성한 화면 파일만 다룹니다.
+**초기 공개 시험용 배포.** 이전 한글화 전용 게시본·작업 이력은 포함하지 않습니다. 이 저장소는 통합 프로그램과 기본 설정으로 다시 생성한 화면 파일만 다룹니다.
 
 ![스트림덱 기본 화면](docs/deck-default.png)
 
@@ -115,7 +115,7 @@ This is a snapshot of the local development conversation's cumulative usage. Lat
 
 A Windows editor and integrated display resources for the AULA L99. The Chinese menus are localized into Korean, while English menus remain available. The home screen gains a Stream Deck entry button, a page with 11 customizable shortcuts and a back button. Korean and English labels within the Stream Deck area use a pixel font.
 
-This is a **private review release** containing the integrated application and display resources rebuilt with factory defaults. It does not include the previous localization-only package or its development history.
+This is an **initial experimental release** containing the integrated application and display resources rebuilt with factory defaults. It does not include the previous localization-only package or its development history.
 
 - Launch programs, files, folders, shortcuts and HTTP/HTTPS addresses.
 - Customize the names and icons of 11 buttons; extract Windows file icons or select an image.
