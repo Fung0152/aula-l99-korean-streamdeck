@@ -24,7 +24,23 @@ Windows 편집기와 AULA L99 디스플레이용 통합 화면 리소스입니�
 
 **초기 공개 시험용 배포.** 이전 한글화 전용 게시본·작업 이력은 포함하지 않습니다. 이 저장소는 통합 프로그램과 기본 설정으로 다시 생성한 화면 파일만 다룹니다.
 
-![스트림덱 기본 화면](docs/deck-default.png)
+## 실기기 및 프로그램 화면 / Photos & Screenshots
+
+공개용 사진은 EXIF 등 메타데이터를 제거했고, 프로그램 화면의 개인 경로는 가렸습니다. 실기기 사진은 사용자가 구성한 바로가기 예시이며 배포 기본 설정과는 다를 수 있습니다.
+
+Metadata was removed from the published images, and personal paths were redacted in the editor screenshot. Device photos show a user's shortcut configuration, which may differ from the distribution defaults.
+
+| 홈 화면 / Home | 스트림덱 / Stream Deck |
+|---|---|
+| <img src="docs/screenshots/home-screen.jpg" alt="AULA L99 Korean home screen" width="420"> | <img src="docs/screenshots/streamdeck-screen.jpg" alt="AULA L99 Stream Deck shortcuts" width="420"> |
+
+| 한글 설정 / Korean Settings | 기기 정보 / Device Information |
+|---|---|
+| <img src="docs/screenshots/settings-screen.jpg" alt="Korean settings menu" width="420"> | <img src="docs/screenshots/device-info.jpg" alt="AULA L99 V1.29 device information" width="420"> |
+
+### Windows 편집기 / Windows Editor
+
+<img src="docs/screenshots/editor-screenshot.png" alt="L99 Stream Deck Windows editor; personal paths redacted" width="680">
 
 ## 주요 기능
 
@@ -55,7 +71,7 @@ PC 연결 프로그램이 켜져 있어야 앱 실행이 동작합니다. 화면
 
 ## 데이터 보존과 개인정보
 
-개인 IP·날씨 지역·좌표·개인 경로·설정·사용자 아이콘·사진·통신 로그·원본 개발 대화는 포함하지 않습니다. 지역 설정을 사용했던 실시간 날씨·습도 도우미도 포함하지 않습니다. 기본 화면의 실시간 정보 메뉴에 PC/날씨 값을 계속 공급하는 기능은 별도 도우미가 필요합니다.
+개인 IP·날씨 지역·좌표·개인 경로·설정 파일·사용자 아이콘 원본·기기에 저장한 사진/GIF 원본·통신 로그·원본 개발 대화는 포함하지 않습니다. 지역 설정을 사용했던 실시간 날씨·습도 도우미도 포함하지 않습니다. 기본 화면의 실시간 정보 메뉴에 PC/날씨 값을 계속 공급하는 기능은 별도 도우미가 필요합니다.
 
 프로그램의 사용자 설정과 아이콘은 실행 폴더의 `data/`에 저장됩니다. Git에서는 제외합니다. 자동 위치 조회·원격 로그 수집·날씨 API 호출은 하지 않습니다. 사용자가 지정한 웹 주소는 기본 브라우저로 엽니다.
 
@@ -144,7 +160,7 @@ The PC application must remain running to launch Windows applications. The displ
 
 ### Privacy and data preservation
 
-The release excludes personal IP addresses, weather locations and coordinates, personal paths, settings, custom icons, photos, communication logs and development conversations. The weather/humidity helper that previously used a personal location is also excluded. Continuously supplying PC/weather readings to the existing real-time information screen requires a separate helper.
+The release excludes personal IP addresses, weather locations and coordinates, personal paths, local configuration files, standalone custom-icon files, photos/GIFs stored on the device, communication logs and development conversations. The weather/humidity helper that previously used a personal location is also excluded. Continuously supplying PC/weather readings to the existing real-time information screen requires a separate helper.
 
 User settings and icons are saved locally under `data/`, which is ignored by Git. The application does not automatically locate the user, collect remote logs or call a weather API. User-configured web addresses open in the default browser.
 
