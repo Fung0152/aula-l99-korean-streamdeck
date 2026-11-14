@@ -1,4 +1,4 @@
-# AULA L99 Korean Localization & Stream Deck Mod
+# AULA L99 Keyboard — Korean Localization & Stream Deck Mod
 
 ### 독거미 AULA L99 한글화 및 스트림덱 모드 추가
 
@@ -95,7 +95,7 @@ python build.py
 
 ## English
 
-### AULA L99 Korean Localization & Stream Deck Mod
+### AULA L99 Keyboard — Korean Localization & Stream Deck Mod
 
 **This program was written using GPT SOL 6.1. The GitHub project description and documentation were also written with GPT.** Because the code was developed with GPT, we recommend reviewing the code, file hashes and device connection with GPT when applying the modifications. AI assistance does not guarantee compatibility with every hardware revision.
 
